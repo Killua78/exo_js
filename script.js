@@ -30,5 +30,29 @@ if(age >= 0 && age < 18){
 
 // pour gérer le cas où âge n'est pas un nombre : typeof age !== "number" || age < 0
 
+// === Exo 3 : boucle FOR ===
+/** 
+ * 
+for(let i = 1; i <= 5; i++){
+    if(i === 5){
+        console.log("dernier tour");
+        
+    }else{
+        console.log(`tour numéro ${i}`);
+    }
+}
+
+// === Exo 3.1 : boucle FOR inversé ===
+
+for(let i = 5; i >= 1; i--){
+    if(i === 1){
+        console.log("Décollage !");
+    }else{
+        console.log(`Compte à rebours : ${i}`);
+        
+    }
+}
+
+*/
 
 
