@@ -78,7 +78,7 @@ for(let i = 1; i <= 10; i++){
 
 // === Exo 5 : devine le nombre ===
 
-// Math.floor(Math.random() * 10) + 1 
+// Math.floor(Math.random() * 10) + 1
 
 /**
 💡 Décomposition :
@@ -108,6 +108,9 @@ if(supposition === nombre){
 }
 */
 
+// === Exo 5.1 : devine le nombre prompt ===
+
+/** 
 let nombre = (Math.floor(Math.random() * 10) + 1);
 let proposition = prompt("Devine un nombre entre 1 et 10");
 
@@ -118,7 +121,41 @@ if(nombre === parseInt(proposition)){
 }else{
     console.log(`C'est raté, le nombre était ${nombre}`);
 }
+*/
 
+// === Exo 6 : mini calculatrice ===
 
+let nombre1 = parseFloat(prompt("Choisissez un premier nombre"));
+let nombre2 = parseFloat(prompt("Choisissez un second nombre"));
+let operateur = prompt("Choisissez un opérateur : +, -, *, /");
 
+// Vérifie si les deux valeurs sont bien des nombres
+if (isNaN(nombre1) || isNaN(nombre2)) {
+  console.log("Vous devez entrer deux nombres valides.");
+} else {
+  switch (operateur) {
+    case "+":
+      console.log(`${nombre1} + ${nombre2} = ${nombre1 + nombre2}`);
+      break;
+
+    case "-":
+      console.log(`${nombre1} - ${nombre2} = ${nombre1 - nombre2}`);
+      break;
+
+    case "*":
+      console.log(`${nombre1} * ${nombre2} = ${nombre1 * nombre2}`);
+      break;
+
+    case "/":
+      if (nombre2 === 0) {
+        console.log("Division par zéro impossible !");
+      } else {
+        console.log(`${nombre1} / ${nombre2} = ${nombre1 / nombre2}`);
+      }
+      break;
+
+    default:
+      console.log("Veuillez choisir un opérateur valide : +, -, *, /");
+  }
+}
 
